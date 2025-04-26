@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma</title>
+
+    <style>
+        body {
+            font: normal 20pt Arial;
+            background-color: gray;
+        }
+
+        .title {
+            color: #fff;
+        }
+
+        #btn-soma {
+            background-color: yellowgreen;
+            border: none;
+            padding: 10px;
+            width: 100px;
+            border-radius: 12px;
+            cursor: pointer;
+        }
+
+        .title-result{
+            font-weight: bold;
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Somando valores</h1>
+
+    <input type="number" name="txtn1" id="txtn1"> + 
+    <input type="number" name="txtn2" id="txtn2">
+
+    <input type="button" value="Somar" id="btn-soma" onclick="somar()" onmouseenter="entrar()" onmouseout="sair()" onmousedown="clicar()">
+
+    <p class="title-result">Resultado</p>
+
+    <p id="res"></p>
+
+    <script>
+        var botao = window.document.getElementById('btn-soma');
+
+        function somar() {
+            var tn1 = window.document.getElementById('txtn1');
+            var tn2 = window.document.getElementById('txtn2');
+            var res = window.document.getElementById('res');
+            var titleRes = window.document.querySelector('.title-result');
+
+            var n1 = Number(tn1.value);
+            var n2 = Number(tn2.value);
+            var s = n1 + n2;
+
+            res.innerHTML = `A <strong>soma</strong> entre ${n1} e ${n2} vale ${s}`;
+        }
+
+        function entrar(){
+            botao.style.background = 'green';
+            botao.style.color = 'white';
+        }
+
+        function sair(){
+            botao.style.background = 'yellowgreen';
+            botao.style.color = 'black'
+        }
+
+        function clicar(){
+            botao.style.background = 'black';
+            botao.style.color = 'yellowgreen';
+        }
+    </script>
+</body>
+</html>

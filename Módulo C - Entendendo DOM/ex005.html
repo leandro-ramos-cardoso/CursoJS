@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com DOM</title>
+
+    <style>
+        body{
+            background-color: rgb(68, 125, 199);
+            color: #fff;
+            font-size: 18pt;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com DOM</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em Javascript.</p>
+
+    <div id="mensagem">Clique em mim</div><br>
+
+    <div class="mensagem2">Seleção com classe</div><br>
+
+    <div id="mensagem3">Seleção com querySelector</div><br><br>
+
+    <script>
+        // Selecionando elementos
+        var p1 = window.document.getElementsByTagName("p")[1];
+        var corpo = window.document.body;
+
+        var msg = window.document.getElementById("mensagem");
+
+        var msg2 = window.document.getElementsByClassName("mensagem2")[0];
+
+        var msg3 = window.document.querySelector('div#mensagem3');
+
+        // Usando class
+        var msg4 = window.document.querySelector('div.mensagem4')
+
+
+        // Mudando a cor do p
+        p1.style.color = "blue";
+        corpo.style.background = "black";
+
+        // Chamando e imprimindo em tela as variaveis
+
+        // Sem formatação, apenas o texto
+        document.write(p1.innerText + "<br>");
+
+        // Com formatação, pegando do HTML com tags
+        document.write(p1.innerHTML);
+
+        msg.style.background = "crimson";
+
+        // Alterando o texto via DOM de duas formas:
+        msg.innerText = ("Estou estudando");
+        
+        window.document.getElementById("mensagem").innerText = "Olá, mundo!"
+
+        msg2.innerText = ("Testando 1,2,3 ...");
+
+        msg3.style.color = 'yellowgreen';
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estudo com DOM</title>
+    
+    <style>
+        body{
+            background-color: black;
+            color: #ffffff;
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estudando DOM com Javascript</h1>
+
+    <p>Aprendendo a usar DOM em Javascript</p>
+
+    <div id="main">
+        Teste com div
+    </div><br>
+
+    <div class="testeClasse">Testando com class</div><br>
+
+    <h2>Estudo com querySelector</h2>
+
+    <p class="aumentoTexto">Teste texto</p>
+
+    <p class="aumentoTexto">Teste texto2</p>
+
+
+    <script>
+        var titulo = window.document.getElementsByTagName('h1')[0];
+        var testeComDiv = window.document.getElementById('main');
+        var testeClass = window.document.getElementsByClassName('testeClasse')[0];
+        var nomeMaiusculo = window.document.querySelector('.aumentoTexto');
+        var coresP = window.document.querySelectorAll('.aumentoTexto');
+
+        titulo.innerHTML = ('Texto modificado');
+
+        testeComDiv.innerText = 'Testando';
+        testeComDiv.style.color = 'yellow';
+        testeComDiv.style.background = 'crimson';
+
+        testeClass.innerText = 'Teste';
+
+        nomeMaiusculo.innerText = 'Teste com querySelector';
+
+        coresP.forEach(function(p) {
+            p.innerText = p.innerText.toUpperCase();
+        });
+    </script>
+</body>
+</html>
