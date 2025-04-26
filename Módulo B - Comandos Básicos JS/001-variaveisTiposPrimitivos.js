@@ -7,3 +7,8 @@ var soma = a + b;
 
 console.log(soma);
 console.log(typeof(soma));
+
+console.log(typeof(5));
+console.log(typeof(function(){}));
+console.log(typeof(null));
+console.log(typeof(Object));
