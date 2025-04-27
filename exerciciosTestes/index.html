@@ -3,25 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tratamento de dados</title>
-
-    <style>
-        body{
-            text-align: center;
-            background-color: #e2e2e2;
-            color: #eb6619;
-        }
-    </style>
+    <title>Cálculo IMC</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Olá, mundo!</h1>
-    <p>Testando em 1,2,3 ...</p>
+    <header>
+        <h1>Cálculo IMC</h1>
+    </header>
 
-    <script>
-        var nome = window.prompt("Qual o seu nome?");
+    <section>
+        <div id="txtdados">
+            <p>
+                <span>Informe seu peso</span> <br>
+                <input type="number" name="txtpeso" id="txtpeso" placeholder="Informe o peso">
+            </p>
 
-        window.alert("Seja bem vindo " + nome);
+            <p>
+                <span>Informe sua altura</span> <br>
+                <input type="number" name="txtaltura" id="txtaltura" placeholder="Informe a altura em cm"> 
+            </p>
 
-    </script>
+            <img id="foto" src="./foto-capa.jpg" alt="Foto Capa">
+
+            <input id="btn" type="button" value="Verificar" onclick="calculoIMC()"> <br>
+
+            <button id="btnLimpar" style="display: none;" onclick="limparInput('txtpeso', 'txtaltura')">Limpar Dados</button>
+        </div>
+
+        <div id="res">
+            
+        </div>
+
+        <p class="direitos">
+            &copy; 2025 Todos os direitos reservados
+        </p>
+    </section>
+
+    <footer>
+        
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
